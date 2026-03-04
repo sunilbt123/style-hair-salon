@@ -114,6 +114,25 @@ margin-top:60px;
 font-size:14px;
 opacity:0.6;
 }
+  form {
+  max-width: 400px;
+  margin: 40px auto;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  background: #d4af37;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  }
 </style>
 </head>
 
@@ -128,6 +147,28 @@ opacity:0.6;
 </header>
 
 <section class="section">
+  <form name="booking" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="booking">
+
+  <h2>Book Appointment</h2>
+
+  <input type="text" name="name" placeholder="Your Name" required><br><br>
+
+  <input type="tel" name="phone" placeholder="Phone Number" required><br><br>
+
+  <select name="service" required>
+    <option value="">Select Service</option>
+    <option>Haircut</option>
+    <option>Beard Grooming</option>
+    <option>Hair Coloring</option>
+  </select><br><br>
+
+  <input type="date" name="date" required><br><br>
+
+  <input type="time" name="time" required><br><br>
+
+  <button type="submit">Book Now</button>
+  </form>
 <h1>Contact Us</h1>
 
 <div class="contact-card">
