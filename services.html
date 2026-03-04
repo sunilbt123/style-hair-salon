@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services - Style Hair Salon</title>
+
+<style>
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#111;
+  color:white;
+}
+
+/* NAV */
+nav{
+  background:#000;
+  padding:12px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #222;
+}
+
+.logo{
+  font-size:16px;
+  letter-spacing:2px;
+  font-weight:600;
+  color:#d4af37;
+}
+
+.nav-links a{
+  color:#ccc;
+  text-decoration:none;
+  margin-left:25px;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#d4af37;
+}
+
+/* SECTION */
+.section{
+  padding:70px 20px;
+  text-align:center;
+}
+
+/* SERVICE GRID */
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:25px;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* CARD */
+.service-card{
+  background:#1a1a1a;
+  border-radius:15px;
+  overflow:hidden;
+  transition:0.4s;
+  opacity:0;
+  transform:translateY(40px);
+}
+
+.service-card.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.service-card:hover{
+  transform:scale(1.03);
+}
+
+.service-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.service-content{
+  padding:20px;
+}
+
+.service-content h3{
+  color:#d4af37;
+  margin-bottom:10px;
+}
+
+.price{
+  font-weight:bold;
+  margin-top:10px;
+}
+
+/* WHY CHOOSE US SECTION FIX */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:25px;
+  max-width:1000px;
+  margin:40px auto 0;
+}
+
+.card{
+  background:#1a1a1a;
+  padding:25px;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 10px 20px rgba(0,0,0,0.6);
+}
+
+.card h3{
+  color:#d4af37;
+}
+
+/* BUTTON */
+.btn{
+  background:#d4af37;
+  color:black;
+  padding:10px 20px;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  margin-top:20px;
+}
+
+/* HIDDEN SECTION */
+.more-services{
+  display:none;
+  margin-top:30px;
+}
+
+/* FOOTER */
+footer{
+  background:black;
+  text-align:center;
+  padding:20px;
+  color:#aaa;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">Style Hair Salon</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="section">
+  <h2 style="color:#d4af37;">Our Premium Services</h2>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <img src="https://images.pexels.com/photos/1319461/pexels-photo-1319461.jpeg?auto=compress&cs=tinysrgb&w=1000">
+      <div class="service-content">
+        <h3>Haircut & Styling</h3>
+        <p>Modern cuts and professional styling.</p>
+        <div class="price">₹299</div>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486">
+      <div class="service-content">
+        <h3>Beard Grooming</h3>
+        <p>Sharp beard shaping & trimming.</p>
+        <div class="price">₹199</div>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70">
+      <div class="service-content">
+        <h3>Hair Coloring</h3>
+        <p>Premium hair color & highlights.</p>
+        <div class="price">₹999</div>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="btn" onclick="toggleServices()">View More</button>
+
+  <div class="more-services" id="more">
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f">
+        <div class="service-content">
+          <h3>Facial & Skin Care</h3>
+          <p>Relaxing facial treatments.</p>
+          <div class="price">₹699</div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1">
+        <div class="service-content">
+          <h3>Hair Spa</h3>
+          <p>Deep nourishment treatment.</p>
+          <div class="price">₹799</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section" style="background:#111;">
+  <h2>About Style Hair Salon</h2>
+  <p style="max-width:700px;margin:auto;opacity:0.8;">
+    At Style Hair Salon, we deliver premium grooming services with modern techniques and luxury comfort.
+    Our expert stylists focus on precision, hygiene, and customer satisfaction.
+  </p>
+</section>
+
+<section class="section">
+  <h2>Why Choose Us</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Expert Stylists</h3>
+      <p>Professionally trained and experienced staff.</p>
+    </div>
+    <div class="card">
+      <h3>Premium Products</h3>
+      <p>We use high-quality branded products only.</p>
+    </div>
+    <div class="card">
+      <h3>Luxury Experience</h3>
+      <p>Clean, modern & relaxing salon environment.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Style Hair Salon. All Rights Reserved.
+</footer>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/918495867093"
+   style="position:fixed;bottom:20px;right:20px;
+   background:#25D366;color:white;
+   padding:12px 18px;border-radius:50px;
+   text-decoration:none;font-weight:bold;">
+   WhatsApp
+</a>
+
+<script>
+
+function toggleServices(){
+  var more = document.getElementById("more");
+  var btn = document.querySelector(".btn");
+
+  if(more.style.display === "block"){
+    more.style.display = "none";
+    btn.innerText = "View More";
+  } else {
+    more.style.display = "block";
+    btn.innerText = "View Less";
+  }
+}
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+}, { threshold:0.2 });
+
+document.querySelectorAll('.service-card').forEach(card => {
+  observer.observe(card);
+});
+function bookNow(event){
+  event.preventDefault();
+
+  var name = document.querySelector('input[type="text"]').value;
+  var phone = document.querySelector('input[type="tel"]').value;
+  var service = document.querySelector('select').value;
+  var date = document.querySelector('input[type="date"]').value;
+  var time = document.querySelector('input[type="time"]').value;
+  var notes = document.querySelector('textarea').value;
+
+  var message = 
+    "New Booking Request:%0A%0A" +
+    "Name: " + name + "%0A" +
+    "Phone: " + phone + "%0A" +
+    "Service: " + service + "%0A" +
+    "Date: " + date + "%0A" +
+    "Time: " + time + "%0A" +
+    "Notes: " + notes;
+
+  var whatsappNumber = "918495867093"; // 🔴 CHANGE THIS
+
+  var url = "https://wa.me/" + whatsappNumber + "?text=" + message;
+
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+  </html>
