@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Style Hair Salon</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins', sans-serif;
+background:#0f0f0f;
+color:white;
+}
+
+/* Header Same as Home */
+header{
+position:fixed;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.8);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-family:'Playfair Display', serif;
+font-size:28px;
+letter-spacing:2px;
+color:#d4af37;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:30px;
+font-size:14px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#d4af37;
+}
+
+/* Section */
+.section{
+padding:150px 8% 100px 8%;
+text-align:center;
+}
+
+.section h1{
+font-family:'Playfair Display', serif;
+font-size:45px;
+margin-bottom:40px;
+color:#d4af37;
+}
+
+/* Contact Card */
+.contact-card{
+max-width:800px;
+margin:auto;
+background:#1a1a1a;
+padding:40px;
+border-radius:15px;
+box-shadow:0 15px 30px rgba(0,0,0,0.6);
+}
+
+.contact-card p{
+margin:15px 0;
+font-size:16px;
+opacity:0.9;
+}
+
+/* Buttons */
+.btn{
+display:inline-block;
+padding:12px 30px;
+border:1px solid #d4af37;
+color:#d4af37;
+text-decoration:none;
+transition:0.3s;
+margin:10px;
+border-radius:5px;
+}
+
+.btn:hover{
+background:#d4af37;
+color:black;
+}
+
+/* Map */
+.map{
+margin-top:40px;
+border-radius:15px;
+overflow:hidden;
+}
+
+/* Footer */
+footer{
+padding:40px;
+text-align:center;
+background:#000;
+margin-top:60px;
+font-size:14px;
+opacity:0.6;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Style Hair Salon</div>
+<nav>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+</nav>
+</header>
+
+<section class="section">
+<h1>Contact Us</h1>
+
+<div class="contact-card">
+
+<p><strong>📍 Address:</strong><br>
+Style Hair Salon,<br>
+Hubli,<br>
+Karnataka, India
+</p>
+
+<p><strong>📞 Phone:</strong> 8495867093</p>
+<p><strong>⏰ Timings:</strong> 9:00 AM – 9:00 PM</p>
+
+<a href="tel:+918495867093" class="btn">Call Now</a>
+<a href="https://wa.me/918495867093" class="btn">Chat on WhatsApp</a>
+
+<div class="map">
+<div class="map">
+  <div class="map">
+<iframe
+src="https://www.google.com/maps?q=Hubli,Karnataka,India&output=embed"
+width="100%"
+height="350"
+style="border:0;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 Style Hair Salon | All Rights Reserved
+</footer>
+
+</body>
+</html>
