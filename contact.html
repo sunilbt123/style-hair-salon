@@ -147,28 +147,49 @@ button {
 </header>
 
 <section class="section">
-  <form name="booking" method="POST" data-netlify="true">
-  <input type="hidden" name="form-name" value="booking">
-
+  <form onsubmit="sendToWhatsApp(); return false;">
+  
   <h2>Book Appointment</h2>
 
-  <input type="text" name="name" placeholder="Your Name" required><br><br>
+  <input type="text" id="name" placeholder="Your Name" required><br><br>
 
-  <input type="tel" name="phone" placeholder="Phone Number" required><br><br>
+  <input type="tel" id="phone" placeholder="Phone Number" required><br><br>
 
-  <select name="service" required>
+  <select id="service" required>
     <option value="">Select Service</option>
     <option>Haircut</option>
     <option>Beard Grooming</option>
     <option>Hair Coloring</option>
   </select><br><br>
 
-  <input type="date" name="date" required><br><br>
+  <input type="date" id="date" required><br><br>
 
-  <input type="time" name="time" required><br><br>
+  <input type="time" id="time" required><br><br>
 
   <button type="submit">Book Now</button>
-  </form>
+
+</form>
+
+<script>
+function sendToWhatsApp() {
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+  var service = document.getElementById("service").value;
+  var date = document.getElementById("date").value;
+  var time = document.getElementById("time").value;
+
+  var message = "Hello, I want to book an appointment:%0A%0A"
+              + "Name: " + name + "%0A"
+              + "Phone: " + phone + "%0A"
+              + "Service: " + service + "%0A"
+              + "Date: " + date + "%0A"
+              + "Time: " + time;
+
+  var whatsappURL = "https://wa.me/918495867093?text=" + message;
+
+  window.open(whatsappURL, "_blank");
+}
+</script>
 <h1>Contact Us</h1>
 
 <div class="contact-card">
